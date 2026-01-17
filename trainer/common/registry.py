@@ -96,4 +96,8 @@ class Registry:
     def list_ls_schedulers(cls):
         return sorted(cls.mapping['lr_scheduler_name_mapping'].keys())
 
+    @classmethod
+    def get_runner_class(cls, name):
+        return cls.mapping['runner_name_mapping'].get(name, None)
+
 registry = Registry()
