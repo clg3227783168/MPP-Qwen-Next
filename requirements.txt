@@ -1,4 +1,6 @@
 numpy
 pandas
-transformers>=4.33.0
-torch==2.0.1
+matplotlib
+transformers==4.40.0.dev0
+torch==2.1.2
+torchvision==0.16.2

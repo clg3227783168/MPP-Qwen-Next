@@ -12,7 +12,7 @@ import random
 import numpy as np
 import torch
 import torch.distributed as dist
-form common.dist_utils import(
+from common.dist_utils import(
     init_distributed_mode,
     main_process
 )
@@ -92,5 +92,5 @@ def main():
     trainer = Trainer(config, model, datasets, task,job_id)
     trainer.train()
 
-if __name = '__main__':
+if __name == '__main__':
     main()

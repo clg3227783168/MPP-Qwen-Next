@@ -73,5 +73,4 @@ for i in range(len(t)):
 
 # 导出
 df = pd.DataFrame(history, columns=['Time_s', 'LVP_mmHg', 'AoP_mmHg', 'Flow_Lmin', 'PumpSpeed_RPM'])
-df.to_csv('vad_balanced_data.csv', index=False)
-print("平衡后的数据已生成。")
+df.to_csv('vad_data.csv', index=False)
