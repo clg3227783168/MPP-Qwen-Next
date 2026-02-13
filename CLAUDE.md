@@ -8,7 +8,9 @@
 -C_{penalty} & \text{if } LVP_{min} < P_{threshold} \\ 
 0 & \text{otherwise} 
 \end{cases}$$反流惩罚：防止血液从主动脉倒流回左心室$$R_{backflow} = -\lambda \cdot \max(0, -Q_{pump})$$转速平滑性约束：惩罚转速的剧烈波动，防止溶血$$R_{stab} = -|\omega_t - \omega_{t-1}|$$
-## 任务
+## 任务1 (已完成,见gradient_clipping_comparison.py)
 用matplotlib给出使用梯度裁剪前后的训练效果图对比
 ### 要求
 生成虚拟的训练数据：包括梯度裁剪的阈值为0.1，0.5，和1三个值和没有梯度裁剪情况下2000个step中的loss数据
+## 任务2 (待完成)
+目前生成的虚拟训练数据收敛的比较好,我希望生成不那么收敛的数据,因为只有2000个step,不应该那么收敛
