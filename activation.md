@@ -1,0 +1,2 @@
+# 需求
+我在做GLU ReLU Swish激活函数选择的消融实验, 参考gradient_clipping_comparison.py生成三种激活函数的训练效果图,我希望GLU的效果最好

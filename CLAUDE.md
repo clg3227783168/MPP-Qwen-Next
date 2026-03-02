@@ -1,6 +1,6 @@
 # 使用强化学习模型进行心室辅助装置的泵速自适应控制
 ## 模型架构
-输入的信号包括主动脉压力、坐心室压力、心输出量，经过1D-CNN和transformer之后，进入Actor和Critic网络，输出动作和价值。
+输入的信号包括主动脉压力、坐心室压力、心输出量，经过1D-CNN和transformer之后，进入Actor和Critic网络，分别输出动作和价值。
 ![alt text](image.png)
 ## 奖励函数
 总奖励函数，通过加权平衡多个生理指标$$R = w_{perf} \cdot R_{perf} + w_{suction} \cdot R_{suction} + w_{backflow} \cdot R_{backflow} + w_{stab} \cdot R_{stab}$$生理灌注奖励：用于维持平均主动脉压 (MAP) 在目标范围内，确保足够的血液供应。$$R_{perf} = -\exp\left(\frac{|MAP_{actual} - MAP_{target}|}{\sigma}\right)$$抽吸惩罚：当左心室压力 (LVP) 过低时给予严厉惩罚，防止心室壁被吸入泵口。$$R_{suction} = 
@@ -12,5 +12,5 @@
 用matplotlib给出使用梯度裁剪前后的训练效果图对比
 ### 要求
 生成虚拟的训练数据：包括梯度裁剪的阈值为0.1，0.5，和1三个值和没有梯度裁剪情况下2000个step中的loss数据
-## 任务2 (待完成)
+## 任务2 (已完成)
 目前生成的虚拟训练数据收敛的比较好,我希望生成不那么收敛的数据,因为只有2000个step,不应该那么收敛

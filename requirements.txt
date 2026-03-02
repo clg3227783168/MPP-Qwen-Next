@@ -4,3 +4,4 @@ matplotlib
 transformers==4.40.0.dev0
 torch==2.1.2
 torchvision==0.16.2
+PlotNeuralNet
